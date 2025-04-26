@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "786628683152",
+    "project_id": "uts-pb-c9050",
+    "storage_bucket": "uts-pb-c9050.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786628683152:android:854f06d2120a88eaeb3f15",
+        "android_client_info": {
+          "package_name": "com.example.uts_pb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXvZ5H0w4G5GFngn7jsCvWIPH-yz6zTZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
