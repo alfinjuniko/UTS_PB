@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ViewMemoFragment extends Fragment {
@@ -31,14 +30,21 @@ public class ViewMemoFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        // Dummy data dulu
-        memoList = new ArrayList<>();
-        memoList.add(new Memo("Belanja", "Beli sayur, buah, susu"));
-        memoList.add(new Memo("Tugas", "Kumpulkan project hari Senin"));
+        // Ambil data memo dari MemoData
+        memoList = MemoData.getMemoList();
 
         memoAdapter = new MemoAdapter(memoList);
         recyclerView.setAdapter(memoAdapter);
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Update RecyclerView setiap kali balik ke halaman ini
+        if (memoAdapter != null) {
+            memoAdapter.notifyDataSetChanged();
+        }
     }
 }

@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-<item
-    android:id="@+id/navigation_home"
-    android:icon="@drawable/baseline_home_24"
-    android:title="Home"/>
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
 
-<item
-    android:id="@+id/navigation_add_memo"
-    android:icon="@drawable/baseline_add_24"
-    android:title="Tambah Memo"/>
+    <item
+        android:id="@+id/navigation_add_memo"
+        android:icon="@drawable/baseline_add_24"
+        android:title="Tambah Memo" />
 
-<item
-    android:id="@+id/navigation_view_memo"
-    android:icon="@drawable/baseline_checklist_24"
-    android:title="Lihat Memo"/>
+    <item
+        android:id="@+id/navigation_view_memo"
+        android:icon="@drawable/baseline_checklist_24"
+        android:title="Lihat Memo" />
 
 </menu>
-
-
