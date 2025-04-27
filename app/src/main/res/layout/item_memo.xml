@@ -29,6 +29,15 @@
             android:text="Isi Memo"
             android:layout_marginTop="8dp"
             android:textColor="#555555"/>
-    </LinearLayout>
 
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hapus"
+            android:layout_marginTop="16dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#FF0000"/>
+
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

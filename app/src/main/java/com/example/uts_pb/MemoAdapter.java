@@ -7,6 +7,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MemoAdapter extends RecyclerView.Adapter<MemoAdapter.MemoViewHolder> {
 
@@ -29,6 +31,14 @@ public class MemoAdapter extends RecyclerView.Adapter<MemoAdapter.MemoViewHolder
         Memo memo = memoList.get(position);
         holder.tvTitle.setText(memo.getTitle());
         holder.tvContent.setText(memo.getContent());
+
+        holder.btnDelete.setOnClickListener(v -> {
+            // Hapus memo dari daftar
+            memoList.remove(position);
+            // Notifikasi perubahan data
+            notifyItemRemoved(position);
+            Toast.makeText(v.getContext(), "Memo Dihapus", Toast.LENGTH_SHORT).show();
+        });
     }
 
     @Override
@@ -38,11 +48,13 @@ public class MemoAdapter extends RecyclerView.Adapter<MemoAdapter.MemoViewHolder
 
     public static class MemoViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle, tvContent;
+        Button btnDelete;
 
         public MemoViewHolder(@NonNull View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvContent = itemView.findViewById(R.id.tvContent);
+            btnDelete = itemView.findViewById(R.id.btnDelete); // Inisialisasi tombol hapus
         }
     }
 }
