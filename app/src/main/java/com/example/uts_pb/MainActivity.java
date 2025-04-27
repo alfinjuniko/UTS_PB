@@ -1,7 +1,6 @@
 package com.example.uts_pb;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
             int itemId = item.getItemId();
             if (itemId == R.id.navigation_home) {
                 selectedFragment = new HomeFragment();
-            } else if (itemId == R.id.navigation_add) {
+            } else if (itemId == R.id.navigation_add_memo) {
                 selectedFragment = new AddMemoFragment();
-            } else if (itemId == R.id.navigation_view) {
-                selectedFragment = new Memo();
+            } else if (itemId == R.id.navigation_view_memo) {
+                selectedFragment = new ViewMemoFragment();
             }
 
             if (selectedFragment != null) {

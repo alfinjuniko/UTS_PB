@@ -33,13 +33,16 @@ public class AddMemoFragment extends Fragment {
         btnSave = view.findViewById(R.id.btnSave);
 
         btnSave.setOnClickListener(v -> {
-            String title = editTitle.getText().toString();
-            String content = editContent.getText().toString();
+            String title = editTitle.getText().toString().trim();
+            String content = editContent.getText().toString().trim();
 
             if (TextUtils.isEmpty(title) || TextUtils.isEmpty(content)) {
                 Toast.makeText(getActivity(), "Field tidak boleh kosong!", Toast.LENGTH_SHORT).show();
             } else {
-                // Sementara kita cuma tampilkan Toast
+                // Simpan ke MemoData
+                Memo memo = new Memo(title, content);
+                MemoData.addMemo(memo);
+
                 Toast.makeText(getActivity(), "Memo Disimpan!", Toast.LENGTH_SHORT).show();
 
                 // Reset form
